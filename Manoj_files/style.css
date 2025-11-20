@@ -34,7 +34,7 @@ body {
 .mac-window {
   background: #ffffff;
   border: 2px solid #000000;
-  box-shadow: 
+  box-shadow:
     2px 2px 0 #000000,
     inset -1px -1px 0 #808080,
     inset 1px 1px 0 #dfdfdf;
@@ -63,9 +63,9 @@ body {
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, 
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 60%);
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 60%);
   transition: all 0.5s ease;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -236,10 +236,10 @@ body {
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, 
-    rgba(255, 255, 255, 0.2) 0%, 
-    rgba(128, 128, 128, 0.1) 50%, 
-    transparent 70%);
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(128, 128, 128, 0.1) 50%,
+      transparent 70%);
   opacity: 0;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -292,9 +292,9 @@ body {
   width: 0;
   height: 2px;
   background: linear-gradient(90deg,
-    #666666 0%,
-    #999999 50%,
-    #666666 100%);
+      #666666 0%,
+      #999999 50%,
+      #666666 100%);
   transition: width 0.3s ease;
 }
 
@@ -338,8 +338,8 @@ body {
   width: 0;
   height: 0;
   background: radial-gradient(circle,
-    rgba(200, 200, 200, 0.15) 0%,
-    transparent 70%);
+      rgba(200, 200, 200, 0.15) 0%,
+      transparent 70%);
   opacity: 0;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -418,7 +418,7 @@ a:hover {
   text-decoration: none;
   font-weight: bold;
   font-size: 12px;
-  box-shadow: 
+  box-shadow:
     inset -1px -1px 0 #808080,
     inset 1px 1px 0 #dfdfdf;
   position: relative;
@@ -434,9 +434,9 @@ a:hover {
   width: 0;
   height: 0;
   background: radial-gradient(circle,
-    rgba(128, 128, 128, 0.3) 0%,
-    rgba(64, 64, 64, 0.2) 50%,
-    transparent 70%);
+      rgba(128, 128, 128, 0.3) 0%,
+      rgba(64, 64, 64, 0.2) 50%,
+      transparent 70%);
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -454,7 +454,7 @@ a:hover {
 }
 
 .mac-button:active {
-  box-shadow: 
+  box-shadow:
     inset 1px 1px 0 #808080,
     inset -1px -1px 0 #dfdfdf;
   transform: translate(1px, 1px);
@@ -465,25 +465,25 @@ a:hover {
   .mac-desktop {
     margin: 1rem;
   }
-  
+
   .profile-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .profile-photo {
     width: 80px;
     height: 80px;
   }
-  
+
   .info-section {
     grid-template-columns: 1fr;
   }
-  
+
   .button-group {
     flex-direction: column;
   }
-  
+
   .mac-button {
     width: 100%;
     text-align: center;
@@ -533,4 +533,158 @@ a:hover {
 
 .web-crack {
   display: none;
+}
+
+.linkedin-post-list.mac-file-list {
+  --row-h: 48px;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  max-width: 520px;
+}
+
+.linkedin-post-list.mac-file-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--row-h);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .12s, box-shadow .12s;
+  outline: none;
+  user-select: none;
+}
+
+.linkedin-post-list.mac-file-list li:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.linkedin-post-list.mac-file-list li .icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: inline-grid;
+  place-items: center;
+  background: #f1f1f1;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.linkedin-post-list.mac-file-list li .meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.linkedin-post-list.mac-file-list li .name {
+  font-size: 14px;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkedin-post-list.mac-file-list li .subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkedin-post-list.mac-file-list li .chevron {
+  color: #999;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.linkedin-post-list.mac-file-list li:hover,
+.linkedin-post-list.mac-file-list li:focus {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.linkedin-post-list.mac-file-list li:active {
+  transform: translateY(1px);
+}
+
+/* keyboard focus ring */
+.linkedin-post-list.mac-file-list li:focus {
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.12);
+}
+
+/* Modal (popup) styles — replaces inline embed panel */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 9999;
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-window {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+}
+
+.modal-close {
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.modal-body {
+  padding: 0 12px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 640px;
+  border: 0;
+  border-radius: 8px;
+  max-width: 680px;
+}
+
+.modal-note {
+  padding: 12px;
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.modal-note a {
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: 600;
 }
