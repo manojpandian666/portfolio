@@ -23,6 +23,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff0080, #00b3ff, #00ff6a);
+  background-size: 600% 600%;
+  animation: moveBg 10s linear infinite;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Mac Desktop */
 .mac-desktop {
   width: 100%;
