@@ -21,15 +21,13 @@ body {
   justify-content: center;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body {
   margin: 0;
   height: 100vh;
   background: linear-gradient(45deg, #ff0080, #00b3ff, #00ff6a);
   background-size: 600% 600%;
   animation: moveBg 10s linear infinite;
 }
+
 
 @keyframes moveBg {
   0% { background-position: 0% 50%; }
